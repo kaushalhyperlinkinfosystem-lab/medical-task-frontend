@@ -1,0 +1,43 @@
+<div class="app-shell">
+  <div class="app-backdrop" aria-hidden="true"></div>
+
+  <header class="site-chrome">
+    <nav class="main-nav">
+      <a routerLink="/" class="logo" aria-label="ClariMed AI home">
+        <span class="logo-mark">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+              <linearGradient id="clarimed-g" x1="4" y1="4" x2="36" y2="36" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#0284c7"/>
+                <stop offset="1" stop-color="#059669"/>
+              </linearGradient>
+            </defs>
+            <rect x="2" y="2" width="36" height="36" rx="8" fill="url(#clarimed-g)"/>
+            <circle cx="18" cy="18" r="8" stroke="white" stroke-width="3"/>
+            <path d="M24 24L31 31" stroke="white" stroke-width="3" stroke-linecap="round"/>
+            <path d="M18 14V22M14 18H22" stroke="white" stroke-width="2.4" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span>ClariMed AI</span>
+      </a>
+
+      <div class="nav-links">
+        <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Dashboard</a>
+        <a routerLink="/xray" routerLinkActive="active">X-Ray</a>
+        <a routerLink="/pdf" routerLinkActive="active">PDF Report</a>
+        <a routerLink="/blood" routerLinkActive="active">Blood Report</a>
+        <a routerLink="/pricing" routerLinkActive="active">Pricing</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="page-frame">
+      <router-outlet></router-outlet>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>ClariMed AI helps you understand medical reports in simple language. It must not replace diagnosis, treatment, or advice from a licensed clinician.</p>
+  </footer>
+</div>
